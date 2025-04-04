@@ -1,0 +1,63 @@
+<div class="entity-detail">
+  <h1 i18n>Информация о библиотеке</h1>
+
+  <div *ngIf="library" class="details-container">
+    <div class="detail-row">
+      <span class="field" i18n>Категория:</span>
+      <span class="value">{{ library.Category }}</span>
+    </div>
+    <div class="detail-row">
+      <span class="field" i18n>Короткое название:</span>
+      <span class="value">{{ library.ShortName }}</span>
+    </div>
+    <div class="detail-row">
+      <span class="field" i18n>Полное название:</span>
+      <span class="value">{{ library.FullName }}</span>
+    </div>
+    <div class="detail-row">
+      <span class="field" i18n>Адрес:</span>
+      <span class="value">{{ library.ObjectAddress[0].Address }}</span>
+    </div>
+    <div class="detail-row">
+      <span class="field" i18n>ФИО руководителя:</span>
+      <span class="value">{{ library.ChiefName }}</span>
+    </div>
+    <div class="detail-row">
+      <span class="field" i18n>Должность руководителя:</span>
+      <span class="value">{{ library.ChiefPosition }}</span>
+    </div>
+    <div class="detail-row">
+      <span class="field" i18n>Сайт:</span>
+      <span class="value">{{ library.WebSite }}</span>
+    </div>
+    <div class="detail-row">
+      <span class="field" i18n>Email:</span>
+      @for (email of library.Email; track email.Email) {
+        <span class="value">{{ email.Email }}</span>
+      }
+    </div>
+    <div class="detail-row">
+      <span class="field" i18n>Номер телефона:</span>
+      @for (phone of library.PublicPhone; track phone.PublicPhone) {
+        <span class="value">{{ phone.PublicPhone }}</span>
+        {{phone.PublicPhone}}
+      }
+    </div>
+    <div class="detail-row">
+      <span class="field" i18n>Количество мест в читальном зале:</span>
+      <span class="value">{{ library.NumOfSeats }}</span>
+    </div>
+    <div class="detail-row">
+      <span class="field" i18n>Количество читателей:</span>
+      <span class="value">{{ library.NumOfReaders }}</span>
+    </div>
+    <div class="detail-row">
+      <span class="field" i18n>Количество посещений:</span>
+      <span class="value">{{ library.NumOfVisitors }}</span>
+    </div>
+  </div>
+
+  <ng-template #noData>
+    <p i18n>Данные не найдены.</p>
+  </ng-template>
+</div>

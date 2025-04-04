@@ -1,0 +1,46 @@
+.entity-detail {
+  max-width: 600px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #ececec;
+}
+
+.field {
+  font-weight: bold;
+  color: #555;
+  flex: 1;
+}
+
+.value {
+  flex: 2;
+  text-align: right;
+  color: #333;
+}
+
+p {
+  text-align: center;
+  color: #888;
+}
